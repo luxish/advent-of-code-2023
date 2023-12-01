@@ -32,7 +32,7 @@ func Day1Part1(reader io.Reader) int {
 		for idx := 0; idx < len(line); idx++ {
 			first, last = firstAndLastForRune(line[idx], first, last)
 		}
-		if first != -1 && last != -1 {
+		if first != INIT_VAL && last != INIT_VAL {
 			result += first*10 + last
 		}
 	}
