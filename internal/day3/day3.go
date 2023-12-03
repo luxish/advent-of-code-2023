@@ -3,7 +3,6 @@ package day3
 import (
 	"bufio"
 	"io"
-	"log"
 	"strconv"
 	"unicode"
 )
@@ -95,7 +94,6 @@ func Day3Part1(reader io.Reader) int {
 			for nidx := 0; nidx < len(engine.numbers[s.line-1]); nidx++ {
 				nm := engine.numbers[s.line-1][nidx]
 				if s.idx-nm.idx <= len(nm.numberName) && s.idx-nm.idx >= -1 {
-					log.Printf("Found top of %v %v", s, nm.numberName)
 					result += nm.ToNumber()
 				}
 			}
@@ -105,7 +103,6 @@ func Day3Part1(reader io.Reader) int {
 			for nidx := 0; nidx < len(engine.numbers[s.line+1]); nidx++ {
 				nm := engine.numbers[s.line+1][nidx]
 				if s.idx-nm.idx <= len(nm.numberName) && s.idx-nm.idx >= -1 {
-					log.Printf("Found bottom of %v %v", s, nm.numberName)
 					result += nm.ToNumber()
 				}
 			}
@@ -114,7 +111,6 @@ func Day3Part1(reader io.Reader) int {
 		for nidx := 0; nidx < len(engine.numbers[s.line]); nidx++ {
 			nm := engine.numbers[s.line][nidx]
 			if s.idx-nm.idx == len(nm.numberName) || s.idx-nm.idx == -1 {
-				log.Printf("Found side of %v %v", s, nm.numberName)
 				result += nm.ToNumber()
 			}
 		}
@@ -132,7 +128,6 @@ func Day3Part2(reader io.Reader) int {
 			for nidx := 0; nidx < len(engine.numbers[s.line-1]); nidx++ {
 				nm := engine.numbers[s.line-1][nidx]
 				if s.idx-nm.idx <= len(nm.numberName) && s.idx-nm.idx >= -1 {
-					log.Printf("Found top of %v %v", s, nm.numberName)
 					adjNumbers = append(adjNumbers, nm.ToNumber())
 				}
 			}
@@ -142,7 +137,6 @@ func Day3Part2(reader io.Reader) int {
 			for nidx := 0; nidx < len(engine.numbers[s.line+1]); nidx++ {
 				nm := engine.numbers[s.line+1][nidx]
 				if s.idx-nm.idx <= len(nm.numberName) && s.idx-nm.idx >= -1 {
-					log.Printf("Found bottom of %v %v", s, nm.numberName)
 					adjNumbers = append(adjNumbers, nm.ToNumber())
 				}
 			}
@@ -151,7 +145,6 @@ func Day3Part2(reader io.Reader) int {
 		for nidx := 0; nidx < len(engine.numbers[s.line]); nidx++ {
 			nm := engine.numbers[s.line][nidx]
 			if s.idx-nm.idx == len(nm.numberName) || s.idx-nm.idx == -1 {
-				log.Printf("Found side of %v %v", s, nm.numberName)
 				adjNumbers = append(adjNumbers, nm.ToNumber())
 			}
 		}
