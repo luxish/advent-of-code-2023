@@ -87,7 +87,6 @@ func Day4Part2(reader io.Reader) int {
 		}
 		// The original
 		gamesMap[game.Id]++
-
 		if counter > 0 {
 			for gIdx := 0; gIdx < counter; gIdx++ {
 				gamesMap[game.Id+gIdx+1] += gamesMap[game.Id]
