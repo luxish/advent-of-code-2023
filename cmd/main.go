@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/luxish/advent-of-code-2023/internal/day5"
+	"github.com/luxish/advent-of-code-2023/internal/day6"
 	"github.com/luxish/advent-of-code-2023/internal/utils"
 )
 
@@ -25,5 +25,7 @@ func main() {
 	// log.Printf("Day 4 part 1 - Result %v \n", day4.Day4Part1(utils.OpenFile(fileName)))
 	// log.Printf("Day 4 part 2 - Result %v \n", day4.Day4Part2(utils.OpenFile(fileName)))
 	// log.Printf("Day 5 part 1 - Result %v \n", day5.Part1(utils.OpenFile(fileName)))
-	log.Printf("Day 5 part 2 - Result %v \n", day5.Part2(utils.OpenFile(fileName)))
+	// log.Printf("Day 5 part 2 - Result %v \n", day5.Part2(utils.OpenFile(fileName)))
+	// log.Printf("Day 6 part 1 - Result %v \n", day6.Part1(utils.OpenFile(fileName)))
+	log.Printf("Day 5 part 2 - Result %v \n", day6.Part2(utils.OpenFile(fileName)))
 }
