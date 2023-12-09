@@ -157,7 +157,6 @@ func Part1(reader io.Reader) int {
 		}
 		return result < 0
 	})
-	log.Println(hands)
 	for idx := 0; idx < len(hands); idx++ {
 		result += (idx + 1) * hands[idx].Points
 	}
@@ -196,7 +195,6 @@ func Part2(reader io.Reader) int {
 		}
 		return result < 0
 	})
-	log.Println(hands)
 	for idx := 0; idx < len(hands); idx++ {
 		result += (idx + 1) * hands[idx].Points
 	}

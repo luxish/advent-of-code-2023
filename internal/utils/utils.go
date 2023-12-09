@@ -30,3 +30,11 @@ func Filer[T any](slice []T, filerFn func(T) bool) []T {
 	}
 	return result
 }
+
+// Euclidian algorithm
+func GCD(first, second int) int {
+	for second != 0 {
+		second, first = first%second, second
+	}
+	return first
+}
